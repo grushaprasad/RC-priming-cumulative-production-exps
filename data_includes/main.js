@@ -106,7 +106,7 @@ PennController.Template(row => PennController( "experiment" ,
     // ,
 
 
-    newButton("(Re)play")
+    newButton("Read prompt again")
         .print()
         .callback( 
             getTextInput("response")
@@ -123,10 +123,32 @@ PennController.Template(row => PennController( "experiment" ,
                 // .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
                 .wait()
                 .remove()
+            ,
+            getText("prompt")
+                .remove()
+            ,
+
+            getTextInput("response")
+                .print()
+
+            ,
+
+            newButton("continue1", "Next prompt")
+                .settings.center()
+                .settings.css("margin", "20px")
+                .settings.log()
+                .print()
+                .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
+                //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
+                .remove()
+    ,
+
+
+
         )
     ,
 
-    newButton("continue", "Next prompt")
+    newButton("continue2", "Next prompt")
         .settings.center()
         .settings.css("margin", "20px")
         .settings.log()

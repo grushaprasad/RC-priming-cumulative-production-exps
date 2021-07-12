@@ -1,0 +1,26 @@
+.PennController-Scale-scaleButton {
+    padding:15 30 15 30;
+    color:blue;
+    margin: 10px auto;
+
+}
+
+.PennController-Scale-label {
+    font-size: larger
+}
+
+.PennController-Text {
+    font-size: x-large;
+    padding: 30 30 30 30;
+    margin: 10px auto;
+    position: relative;
+}
+
+.PennController-Button {
+    padding: 5px 5px 5px 5px;
+    border-width: 10px;
+    font-size: larger;
+    margin: 50px;
+}
+
+

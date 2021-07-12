@@ -105,17 +105,9 @@ PennController.Template(row => PennController( "experiment" ,
     //     .print()
     // ,
 
-    newButton("continue", "Next prompt")
-        .settings.center()
-        .settings.css("margin", "20px")
-        .settings.log()
-        .print()
-        .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
-        //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
-        .remove()
-    ,
 
     newButton("(Re)play")
+        .print()
         .callback( 
             getTextInput("response")
                 .remove()
@@ -132,9 +124,18 @@ PennController.Template(row => PennController( "experiment" ,
                 .wait()
                 .remove()
         )
-        .print()
-
     ,
+
+    newButton("continue", "Next prompt")
+        .settings.center()
+        .settings.css("margin", "20px")
+        .settings.log()
+        .print()
+        .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
+        //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
+        .remove()
+    ,
+
 
 
 

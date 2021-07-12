@@ -108,9 +108,9 @@ PennController.Template(row => PennController( "experiment" ,
 
     newButton("Read prompt again")
         .print()
-        .remove()
         .callback( 
-            getButton()
+            getButton("progress")
+                .remove()
 
             getTextInput("response")
                 .remove()
@@ -144,10 +144,6 @@ PennController.Template(row => PennController( "experiment" ,
                 .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
                 //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
                 .remove()
-    ,
-
-
-
 
         )
     ,

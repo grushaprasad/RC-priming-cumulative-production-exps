@@ -75,6 +75,21 @@ PennController.Template(row => PennController( "experiment" ,
         .print()
     ,
 
+    newButton("progress", "Click to progress")
+        .settings.center()
+        .settings.css("margin", "20px")
+        .settings.log()
+        .print()
+        // .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
+        .wait()
+        .remove()
+    ,
+
+    getText("prompt")
+        .remove()
+    ,
+
+
     newVar("RT").global().set(v_rt => Date.now())
     ,
     
@@ -95,9 +110,30 @@ PennController.Template(row => PennController( "experiment" ,
         .settings.css("margin", "20px")
         .settings.log()
         .print()
-        // .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
-        .wait(getTextInput("response").test.text(new RegExp("\\w+")))
+        .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
+        //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
         .remove()
+    ,
+
+    newButton("(Re)play")
+        .callback( 
+            getTextInput("response")
+                .remove()
+            ,
+            getText("prompt")
+                .print()
+            ,
+            newButton("progress", "Click to progress")
+                .settings.center()
+                .settings.css("margin", "20px")
+                .settings.log()
+                .print()
+                // .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
+                .wait()
+                .remove()
+        )
+        .print()
+
     ,
 
 
@@ -105,9 +141,6 @@ PennController.Template(row => PennController( "experiment" ,
     getVar("RT").set( v_rt => Date.now() - v_rt )
     ,
     
-    getText("prompt")
-        .remove()
-    ,
 
     getTextInput("response")
         .remove()

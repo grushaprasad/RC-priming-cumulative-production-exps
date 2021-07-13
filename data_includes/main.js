@@ -71,20 +71,6 @@ PennController.Template(row => PennController( "experiment" ,
     ,
 
 
-    ( row.truncated=="yes" ? [
-        newText("instructions", "Re-type the partial sentence in the prompt and complete it.")
-        .settings.center()
-        .settings.css("user-select", "none")
-        .print()
-
-    ] : [
-        newText("prompt", "Re-type the full sentence in the prompt.")
-        .settings.center()
-        .settings.css("user-select", "none")
-        .print()
-    ,       
-    ] )
-
     newButton("progress", "Click to progress")
         .settings.center()
         .settings.css("margin", "20px")
@@ -115,6 +101,21 @@ PennController.Template(row => PennController( "experiment" ,
     //     .print()
     // ,
 
+    ( row.truncated=="yes" ? [
+        newText("instructions", "Re-type the partial sentence in the prompt and complete it.")
+        .settings.center()
+        .settings.css("font-size", "medium")
+        .print()
+
+    ] : [
+        newText("instructions", "Re-type the full sentence in the prompt.")
+        .settings.center()
+        .settings.css("font-size", "medium")
+        .print()
+    ,       
+    ] )
+    
+    ,
 
 
     newButton("read_again", "Read prompt again")
@@ -150,15 +151,15 @@ PennController.Template(row => PennController( "experiment" ,
                 .remove()
             ,
 
-            // getTextInput("response")
-            //     .print()
-            // ,  // this will save the typing progress of participants that
+            getTextInput("response")
+                .print()
+            ,  
 
-            newTextInput("response")
-              .print()
-              .settings.size(800, 75)
-              .settings.log("final")
-            ,
+            // newTextInput("response")
+            //   .print()
+            //   .settings.size(800, 75)
+            //   .settings.log("final")
+            // ,
 
             getButton("continue")
                 .print()
@@ -170,18 +171,40 @@ PennController.Template(row => PennController( "experiment" ,
         )
     ,
 
-    newButton("continue", "Next prompt")
+
+    ( row.truncated=="yes" ? [
+        newButton("continue", "Next prompt")
         .settings.center()
         .settings.css("margin", "20px")
         .settings.log()
         .print()
-        .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s*\\w*", 'i')))
-        //.wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
+        .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
         //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
         .remove()
     ,
 
+    ] : [
+        newButton("continue", "Next prompt")
+        .settings.center()
+        .settings.css("margin", "20px")
+        .settings.log()
+        .print()
+        .wait(getTextInput("response").test.text(new RegExp(row.sentence, 'i')))
+        .remove()
+    ,
+    ,       
+    ] )
 
+    // newButton("continue", "Next prompt")
+    //     .settings.center()
+    //     .settings.css("margin", "20px")
+    //     .settings.log()
+    //     .print()
+    //     .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s*\\w*", 'i')))
+    //     //.wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
+    //     //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
+    //     .remove()
+    // ,
 
 
     getVar("RT").set( v_rt => Date.now() - v_rt )
@@ -193,6 +216,10 @@ PennController.Template(row => PennController( "experiment" ,
     ,
 
     getTextInput("response")
+        .remove()
+    ,
+    
+    getText("instructions")
         .remove()
     ,
 

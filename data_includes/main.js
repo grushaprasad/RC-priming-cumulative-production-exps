@@ -88,6 +88,22 @@ PennController.Template(row => PennController( "experiment" ,
 
     newVar("RT").global().set(v_rt => Date.now())
     ,
+
+    ( row.truncated=="yes" ? [
+        newText("instructions", "<b>Re-type the partial sentence in the prompt and complete it.</b>")
+        .settings.center()
+        .settings.css("font-size", "medium")
+        .print()
+
+    ] : [
+        newText("instructions", "<b>Re-type the full sentence in the prompt.</b>")
+        .settings.center()
+        .settings.css("font-size", "medium")
+        .print()
+    ,       
+    ] )
+    
+    ,
     
     newTextInput("response")
       .print()
@@ -101,21 +117,6 @@ PennController.Template(row => PennController( "experiment" ,
     //     .print()
     // ,
 
-    ( row.truncated=="yes" ? [
-        newText("instructions", "Re-type the partial sentence in the prompt and complete it.")
-        .settings.center()
-        .settings.css("font-size", "medium")
-        .print()
-
-    ] : [
-        newText("instructions", "Re-type the full sentence in the prompt.")
-        .settings.center()
-        .settings.css("font-size", "medium")
-        .print()
-    ,       
-    ] )
-    
-    ,
 
 
     newButton("read_again", "Read prompt again")
@@ -130,6 +131,10 @@ PennController.Template(row => PennController( "experiment" ,
             getTextInput("response")
                 .remove()
             ,
+
+            getTextInput("instructions")
+                .remove()
+
             getText("prompt")
                 .print()
             ,
@@ -151,9 +156,13 @@ PennController.Template(row => PennController( "experiment" ,
                 .remove()
             ,
 
+            getText("instructions")
+                .print()
+
             getTextInput("response")
                 .print()
             ,  
+
 
             // newTextInput("response")
             //   .print()
@@ -174,26 +183,27 @@ PennController.Template(row => PennController( "experiment" ,
 
     ( row.truncated=="yes" ? [
         newButton("continue", "Next prompt")
-        .settings.center()
-        .settings.css("margin", "20px")
-        .settings.log()
-        .print()
-        .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
-        //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
-        .remove()
+            .settings.center()
+            .settings.css("margin", "20px")
+            .settings.log()
+            .print()
+            .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
+            //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
+            .remove()
     ,
 
     ] : [
         newButton("continue", "Next prompt")
-        .settings.center()
-        .settings.css("margin", "20px")
-        .settings.log()
-        .print()
-        .wait(getTextInput("response").test.text(new RegExp(row.sentence, 'i')))
-        .remove()
-    ,
-    ,       
+            .settings.center()
+            .settings.css("margin", "20px")
+            .settings.log()
+            .print()
+            .wait(getTextInput("response").test.text(new RegExp(row.sentence, 'i')))
+            .remove()
+    ,      
     ] )
+
+    ,
 
     // newButton("continue", "Next prompt")
     //     .settings.center()

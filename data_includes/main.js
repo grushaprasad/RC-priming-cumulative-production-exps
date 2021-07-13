@@ -132,8 +132,9 @@ PennController.Template(row => PennController( "experiment" ,
                 .remove()
             ,
 
-            getTextInput("instructions")
+            getText("instructions")
                 .remove()
+            ,
 
             getText("prompt")
                 .print()
@@ -158,6 +159,7 @@ PennController.Template(row => PennController( "experiment" ,
 
             getText("instructions")
                 .print()
+            ,
 
             getTextInput("response")
                 .print()

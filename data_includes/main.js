@@ -23,6 +23,7 @@ PennController("consent",
         )
 );
 
+//SetCounter("counter", 0);
 SetCounter("counter", "inc", 1);
 
 
@@ -91,18 +92,15 @@ PennController.Template(row => PennController( "experiment" ,
 
     ( row.truncated=="yes" ? [
         newText("instructions", "<b>Re-type the partial sentence in the prompt and complete it.</b>")
-        .settings.center()
-        .settings.css("font-size", "medium")
-        .print()
-
+            .settings.center()
+            .settings.css("font-size", "medium")
+            .print()
     ] : [
         newText("instructions", "<b>Re-type the full sentence in the prompt.</b>")
-        .settings.center()
-        .settings.css("font-size", "medium")
-        .print()
-    ,       
+            .settings.center()
+            .settings.css("font-size", "medium")
+            .print()
     ] )
-    
     ,
     
     newTextInput("response")
@@ -110,14 +108,19 @@ PennController.Template(row => PennController( "experiment" ,
       .settings.size(800, 75)
       .settings.log("final")
     ,
-
-    // newText("troubleshooting", "Trouble progressing? Make sure that you typed in the prompt correctly. <b> <br> Do not refresh the page. Your progress will be lost</b>")
-    //     .settings.center()
-    //     .settings.css("font-size", "medium")
-    //     .print()
-    // ,
-
-
+    
+    ( row.truncated=="yes" ? [
+        newText("troubleshooting", "<br> Trouble progressing? Make sure that you typed in the prompt correctly and added a valid completion. <b> <br> Do not refresh the page. Your progress will be lost</b>")
+            .settings.center()
+            // .settings.css("position", "relative", "height", "1500")
+            .print()
+    ] : [
+        newText("troubleshooting", "<br> Trouble progressing? Make sure that you typed in the prompt correctly. <b> <br> Do not refresh the page. Your progress will be lost</b>")
+            .settings.center()
+            // .settings.css("position", "relative", "height", "1500")
+            .print()
+    ] )
+    ,
 
     newButton("read_again", "Read prompt again")
         .settings.center()
@@ -135,19 +138,29 @@ PennController.Template(row => PennController( "experiment" ,
             getText("instructions")
                 .remove()
             ,
-
-            getText("prompt")
-                .print()
+            
+            getText("troubleshooting")
+                .remove()
             ,
             
             getButton("read_again")
                 .remove()
             ,
+
+            getText("prompt")
+                .print()
+            ,
             
-            newButton("progress", "Click to progress")
-                .settings.center()
-                .settings.css("margin", "20px")
-                .settings.log()
+            // newButton("progress", "Click to progress")
+            //     .settings.center()
+            //     .settings.css("margin", "20px")
+            //     .settings.log()
+            //     .print()
+            //     .wait()
+            //     .remove()
+            // ,
+            
+            getButton("progress")
                 .print()
                 .wait()
                 .remove()
@@ -163,25 +176,36 @@ PennController.Template(row => PennController( "experiment" ,
 
             getTextInput("response")
                 .print()
+                .settings.log("final")
             ,  
-
-
-            // newTextInput("response")
-            //   .print()
-            //   .settings.size(800, 75)
-            //   .settings.log("final")
-            // ,
-
-            getButton("continue")
+            
+            getText("troubleshooting")
                 .print()
-            , 
+            ,
+            
+            // ( row.truncated=="yes" ? [
+            //     newText("troubleshooting", "<br> Trouble progressing? Make sure that you typed in the prompt correctly and added a valid completion. <b> <br> Do not refresh the page. Your progress will be lost</b>")
+            //         .settings.center()
+            //         // .settings.css("position", "relative", "height", "1500")
+            //         .print()
+
+            // ] : [
+            //     newText("troubleshooting", "<br> Trouble progressing? Make sure that you typed in the prompt correctly. <b> <br> Do not refresh the page. Your progress will be lost</b>")
+            //         .settings.center()
+            //         // .settings.css("position", "relative", "height", "1500")
+            //         .print()
+            // ] )
+            // ,   
             
             getButton("read_again")
+                .print()
+            ,
+            
+            getButton("continue")
                 .print()
 
         )
     ,
-
 
     ( row.truncated=="yes" ? [
         newButton("continue", "Next prompt")
@@ -192,7 +216,6 @@ PennController.Template(row => PennController( "experiment" ,
             .wait(getTextInput("response").test.text(new RegExp(row.sentence+"\\s+\\w+", 'i')))
             //.wait(getTextInput("response").test.text(new RegExp("\\w+")))
             .remove()
-    ,
 
     ] : [
         newButton("continue", "Next prompt")
@@ -202,10 +225,10 @@ PennController.Template(row => PennController( "experiment" ,
             .print()
             .wait(getTextInput("response").test.text(new RegExp(row.sentence, 'i')))
             .remove()
-    ,      
     ] )
 
     ,
+    
 
     // newButton("continue", "Next prompt")
     //     .settings.center()
@@ -234,6 +257,10 @@ PennController.Template(row => PennController( "experiment" ,
     getText("instructions")
         .remove()
     ,
+    
+    getText("troubleshooting")
+        .remove()
+    ,
 
     newText("transition", " ")
         .settings.center()
@@ -247,7 +274,6 @@ PennController.Template(row => PennController( "experiment" ,
 
     getText("transition")
         .remove()
-    
     )
 
     .log("sent_type", row.sent_type)
@@ -261,6 +287,7 @@ PennController.Template(row => PennController( "experiment" ,
     .log("RT_target", getVar("RT_target"))
     .log("RT_resp", getVar("RT_resp"))
     .log("List", row.Group)
+    .log("truncated", row.truncated)
 );
 
 
@@ -291,9 +318,9 @@ PennController("exp_end",
 
     newTimer("forever", 1)
         .wait()            // Timer never started: will wait forever
-)
+);
 
-PennController.DebugOff()
+// PennController.DebugOff();
 
 
 

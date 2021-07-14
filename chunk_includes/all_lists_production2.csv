@@ -45,7 +45,7 @@ list_1A,target,rrc,amv,attacked,3,attacked3,The senator attacked,NA,NA,yes
 list_1A,filler,filler,NA,NA,NA,Filler15,The basketball player's ankle swelled as he limped off the court.,Was the player injured?,Yes,no
 list_1A,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
 list_1A,prime,prog_rrc,NA,paid,1,paid1,The cashier being paid by the customer muttered something inaudibly.,NA,NA,no
-list_1A,prime,prog_rrc,NA,paid,2,paid2,The organization being paid by the government expanded its misson.,NA,NA,no
+list_1A,prime,prog_rrc,NA,paid,2,paid2,The organization being paid by the government expanded its mission.,NA,NA,no
 list_1A,target,rrc,prog_rrc,paid,3,paid3,The broker paid,NA,NA,yes
 list_1A,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
 list_1A,prime,rrc,NA,accompanied,1,accompanied1,The prince accompanied by the duke arrived at the palace.,NA,NA,no
@@ -165,7 +165,7 @@ list_1B,target,rrc,rrc,attacked,3,attacked3,The senator attacked,NA,NA,yes
 list_1B,filler,filler,NA,NA,NA,Filler15,The basketball player's ankle swelled as he limped off the court.,Was the player injured?,Yes,no
 list_1B,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
 list_1B,prime,amv,NA,paid,1,paid1,The cashier paid the customer and muttered something inaudibly.,NA,NA,no
-list_1B,prime,amv,NA,paid,2,paid2,The organization paid the government and expanded its misson.,NA,NA,no
+list_1B,prime,amv,NA,paid,2,paid2,The organization paid the government and expanded its mission.,NA,NA,no
 list_1B,target,rrc,amv,paid,3,paid3,The broker paid,NA,NA,yes
 list_1B,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
 list_1B,prime,urc,NA,accompanied,1,accompanied1,The prince who was accompanied by the duke arrived at the palace.,NA,NA,no
@@ -285,7 +285,7 @@ list_1C,target,rrc,urc,attacked,3,attacked3,The senator attacked,NA,NA,yes
 list_1C,filler,filler,NA,NA,NA,Filler15,The basketball player's ankle swelled as he limped off the court.,Was the player injured?,Yes,no
 list_1C,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
 list_1C,prime,rrc,NA,paid,1,paid1,The cashier paid by the customer muttered something inaudibly.,NA,NA,no
-list_1C,prime,rrc,NA,paid,2,paid2,The organization paid by the government expanded its misson.,NA,NA,no
+list_1C,prime,rrc,NA,paid,2,paid2,The organization paid by the government expanded its mission.,NA,NA,no
 list_1C,target,rrc,rrc,paid,3,paid3,The broker paid,NA,NA,yes
 list_1C,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
 list_1C,prime,prog_rrc,NA,accompanied,1,accompanied1,The prince being accompanied by the duke arrived at the palace.,NA,NA,no
@@ -405,7 +405,7 @@ list_1D,target,rrc,prog_rrc,attacked,3,attacked3,The senator attacked,NA,NA,yes
 list_1D,filler,filler,NA,NA,NA,Filler15,The basketball player's ankle swelled as he limped off the court.,Was the player injured?,Yes,no
 list_1D,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
 list_1D,prime,urc,NA,paid,1,paid1,The cashier who was paid by the customer muttered something inaudibly.,NA,NA,no
-list_1D,prime,urc,NA,paid,2,paid2,The organization which was paid by the government expanded its misson.,NA,NA,no
+list_1D,prime,urc,NA,paid,2,paid2,The organization which was paid by the government expanded its mission.,NA,NA,no
 list_1D,target,rrc,urc,paid,3,paid3,The broker paid,NA,NA,yes
 list_1D,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
 list_1D,prime,amv,NA,accompanied,1,accompanied1,The prince accompanied the duke and arrived at the palace.,NA,NA,no
@@ -532,7 +532,7 @@ list_2A,prime,amv,NA,attacked,2,attacked2,The lion attacked the hunter and stagg
 list_2A,prime,amv,NA,attacked,3,attacked3,The senator attacked the assassin and was sent to the hospital.,NA,NA,no
 list_2A,target,rrc,amv,attacked,1,attacked1,The troops attacked,NA,NA,yes
 list_2A,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
-list_2A,prime,prog_rrc,NA,paid,2,paid2,The organization being paid by the government expanded its misson.,NA,NA,no
+list_2A,prime,prog_rrc,NA,paid,2,paid2,The organization being paid by the government expanded its mission.,NA,NA,no
 list_2A,prime,prog_rrc,NA,paid,3,paid3,The broker being paid by the company signed the contract.,NA,NA,no
 list_2A,target,rrc,prog_rrc,paid,1,paid1,The cashier paid,NA,NA,yes
 list_2A,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
@@ -675,7 +675,7 @@ list_2B,prime,rrc,NA,attacked,2,attacked2,The lion attacked by the hunter stagge
 list_2B,prime,rrc,NA,attacked,3,attacked3,The senator attacked by the assassin was sent to the hospital.,NA,NA,no
 list_2B,target,rrc,rrc,attacked,1,attacked1,The troops attacked,NA,NA,yes
 list_2B,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
-list_2B,prime,amv,NA,paid,2,paid2,The organization paid the government and expanded its misson.,NA,NA,no
+list_2B,prime,amv,NA,paid,2,paid2,The organization paid the government and expanded its mission.,NA,NA,no
 list_2B,prime,amv,NA,paid,3,paid3,The broker paid the company and signed the contract.,NA,NA,no
 list_2B,target,rrc,amv,paid,1,paid1,The cashier paid,NA,NA,yes
 list_2B,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
@@ -818,7 +818,7 @@ list_2C,prime,urc,NA,attacked,2,attacked2,The lion which was attacked by the hun
 list_2C,prime,urc,NA,attacked,3,attacked3,The senator who was attacked by the assassin was sent to the hospital.,NA,NA,no
 list_2C,target,rrc,urc,attacked,1,attacked1,The troops attacked,NA,NA,yes
 list_2C,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
-list_2C,prime,rrc,NA,paid,2,paid2,The organization paid by the government expanded its misson.,NA,NA,no
+list_2C,prime,rrc,NA,paid,2,paid2,The organization paid by the government expanded its mission.,NA,NA,no
 list_2C,prime,rrc,NA,paid,3,paid3,The broker paid by the company signed the contract.,NA,NA,no
 list_2C,target,rrc,rrc,paid,1,paid1,The cashier paid,NA,NA,yes
 list_2C,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
@@ -961,7 +961,7 @@ list_2D,prime,prog_rrc,NA,attacked,2,attacked2,The lion being attacked by the hu
 list_2D,prime,prog_rrc,NA,attacked,3,attacked3,The senator being attacked by the assassin was sent to the hospital.,NA,NA,no
 list_2D,target,rrc,prog_rrc,attacked,1,attacked1,The troops attacked,NA,NA,yes
 list_2D,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
-list_2D,prime,urc,NA,paid,2,paid2,The organization which was paid by the government expanded its misson.,NA,NA,no
+list_2D,prime,urc,NA,paid,2,paid2,The organization which was paid by the government expanded its mission.,NA,NA,no
 list_2D,prime,urc,NA,paid,3,paid3,The broker who was paid by the company signed the contract.,NA,NA,no
 list_2D,target,rrc,urc,paid,1,paid1,The cashier paid,NA,NA,yes
 list_2D,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
@@ -1512,7 +1512,7 @@ list_1A_rev,prime,rrc,NA,accompanied,2,accompanied2,The children accompanied by 
 list_1A_rev,target,rrc,rrc,accompanied,3,accompanied3,The toddler accompanied,NA,NA,yes
 list_1A_rev,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
 list_1A_rev,prime,prog_rrc,NA,paid,1,paid1,The cashier being paid by the customer muttered something inaudibly.,NA,NA,no
-list_1A_rev,prime,prog_rrc,NA,paid,2,paid2,The organization being paid by the government expanded its misson.,NA,NA,no
+list_1A_rev,prime,prog_rrc,NA,paid,2,paid2,The organization being paid by the government expanded its mission.,NA,NA,no
 list_1A_rev,target,rrc,prog_rrc,paid,3,paid3,The broker paid,NA,NA,yes
 list_1A_rev,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
 list_1A_rev,filler,filler,NA,NA,NA,Filler15,The basketball player's ankle swelled as he limped off the court.,Was the player injured?,Yes,no
@@ -1632,7 +1632,7 @@ list_1B_rev,prime,urc,NA,accompanied,2,accompanied2,The children who were accomp
 list_1B_rev,target,rrc,urc,accompanied,3,accompanied3,The toddler accompanied,NA,NA,yes
 list_1B_rev,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
 list_1B_rev,prime,amv,NA,paid,1,paid1,The cashier paid the customer and muttered something inaudibly.,NA,NA,no
-list_1B_rev,prime,amv,NA,paid,2,paid2,The organization paid the government and expanded its misson.,NA,NA,no
+list_1B_rev,prime,amv,NA,paid,2,paid2,The organization paid the government and expanded its mission.,NA,NA,no
 list_1B_rev,target,rrc,amv,paid,3,paid3,The broker paid,NA,NA,yes
 list_1B_rev,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
 list_1B_rev,filler,filler,NA,NA,NA,Filler15,The basketball player's ankle swelled as he limped off the court.,Was the player injured?,Yes,no
@@ -1752,7 +1752,7 @@ list_1C_rev,prime,prog_rrc,NA,accompanied,2,accompanied2,The children being acco
 list_1C_rev,target,rrc,prog_rrc,accompanied,3,accompanied3,The toddler accompanied,NA,NA,yes
 list_1C_rev,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
 list_1C_rev,prime,rrc,NA,paid,1,paid1,The cashier paid by the customer muttered something inaudibly.,NA,NA,no
-list_1C_rev,prime,rrc,NA,paid,2,paid2,The organization paid by the government expanded its misson.,NA,NA,no
+list_1C_rev,prime,rrc,NA,paid,2,paid2,The organization paid by the government expanded its mission.,NA,NA,no
 list_1C_rev,target,rrc,rrc,paid,3,paid3,The broker paid,NA,NA,yes
 list_1C_rev,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
 list_1C_rev,filler,filler,NA,NA,NA,Filler15,The basketball player's ankle swelled as he limped off the court.,Was the player injured?,Yes,no
@@ -1872,7 +1872,7 @@ list_1D_rev,prime,amv,NA,accompanied,2,accompanied2,The children accompanied the
 list_1D_rev,target,rrc,amv,accompanied,3,accompanied3,The toddler accompanied,NA,NA,yes
 list_1D_rev,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
 list_1D_rev,prime,urc,NA,paid,1,paid1,The cashier who was paid by the customer muttered something inaudibly.,NA,NA,no
-list_1D_rev,prime,urc,NA,paid,2,paid2,The organization which was paid by the government expanded its misson.,NA,NA,no
+list_1D_rev,prime,urc,NA,paid,2,paid2,The organization which was paid by the government expanded its mission.,NA,NA,no
 list_1D_rev,target,rrc,urc,paid,3,paid3,The broker paid,NA,NA,yes
 list_1D_rev,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
 list_1D_rev,filler,filler,NA,NA,NA,Filler15,The basketball player's ankle swelled as he limped off the court.,Was the player injured?,Yes,no
@@ -2006,7 +2006,7 @@ list_2A_rev,prime,rrc,NA,accompanied,2,accompanied2,The children accompanied by 
 list_2A_rev,prime,rrc,NA,accompanied,3,accompanied3,The toddler accompanied by her parents went to the store.,NA,NA,no
 list_2A_rev,target,rrc,rrc,accompanied,1,accompanied1,The prince accompanied,NA,NA,yes
 list_2A_rev,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
-list_2A_rev,prime,prog_rrc,NA,paid,2,paid2,The organization being paid by the government expanded its misson.,NA,NA,no
+list_2A_rev,prime,prog_rrc,NA,paid,2,paid2,The organization being paid by the government expanded its mission.,NA,NA,no
 list_2A_rev,prime,prog_rrc,NA,paid,3,paid3,The broker being paid by the company signed the contract.,NA,NA,no
 list_2A_rev,target,rrc,prog_rrc,paid,1,paid1,The cashier paid,NA,NA,yes
 list_2A_rev,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
@@ -2149,7 +2149,7 @@ list_2B_rev,prime,urc,NA,accompanied,2,accompanied2,The children who were accomp
 list_2B_rev,prime,urc,NA,accompanied,3,accompanied3,The toddler who was accompanied by her parents went to the store.,NA,NA,no
 list_2B_rev,target,rrc,urc,accompanied,1,accompanied1,The prince accompanied,NA,NA,yes
 list_2B_rev,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
-list_2B_rev,prime,amv,NA,paid,2,paid2,The organization paid the government and expanded its misson.,NA,NA,no
+list_2B_rev,prime,amv,NA,paid,2,paid2,The organization paid the government and expanded its mission.,NA,NA,no
 list_2B_rev,prime,amv,NA,paid,3,paid3,The broker paid the company and signed the contract.,NA,NA,no
 list_2B_rev,target,rrc,amv,paid,1,paid1,The cashier paid,NA,NA,yes
 list_2B_rev,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
@@ -2292,7 +2292,7 @@ list_2C_rev,prime,prog_rrc,NA,accompanied,2,accompanied2,The children being acco
 list_2C_rev,prime,prog_rrc,NA,accompanied,3,accompanied3,The toddler being accompanied by her parents went to the store.,NA,NA,no
 list_2C_rev,target,rrc,prog_rrc,accompanied,1,accompanied1,The prince accompanied,NA,NA,yes
 list_2C_rev,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
-list_2C_rev,prime,rrc,NA,paid,2,paid2,The organization paid by the government expanded its misson.,NA,NA,no
+list_2C_rev,prime,rrc,NA,paid,2,paid2,The organization paid by the government expanded its mission.,NA,NA,no
 list_2C_rev,prime,rrc,NA,paid,3,paid3,The broker paid by the company signed the contract.,NA,NA,no
 list_2C_rev,target,rrc,rrc,paid,1,paid1,The cashier paid,NA,NA,yes
 list_2C_rev,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
@@ -2435,7 +2435,7 @@ list_2D_rev,prime,amv,NA,accompanied,2,accompanied2,The children accompanied the
 list_2D_rev,prime,amv,NA,accompanied,3,accompanied3,The toddler accompanied her parents and went to the store.,NA,NA,no
 list_2D_rev,target,rrc,amv,accompanied,1,accompanied1,The prince accompanied,NA,NA,yes
 list_2D_rev,filler,filler,NA,NA,NA,Filler38,The school principal worked,Was the principal busy?,Yes,yes
-list_2D_rev,prime,urc,NA,paid,2,paid2,The organization which was paid by the government expanded its misson.,NA,NA,no
+list_2D_rev,prime,urc,NA,paid,2,paid2,The organization which was paid by the government expanded its mission.,NA,NA,no
 list_2D_rev,prime,urc,NA,paid,3,paid3,The broker who was paid by the company signed the contract.,NA,NA,no
 list_2D_rev,target,rrc,urc,paid,1,paid1,The cashier paid,NA,NA,yes
 list_2D_rev,filler,filler,NA,NA,NA,Filler39,The wallpaper was,Was the wallpaper a bad choice?,No,yes
